@@ -1,0 +1,39 @@
+#Averges Grade Totals
+print("Please enter your grades")
+print("I will then calculate your average.")
+print("I will tell you your letter grade as well.")
+print("When your done entering grades input a zero.")
+print("")
+
+#Declares Variables.
+total = 0
+counter = 0
+
+#While Loop to take inputs.
+while True:
+  entry = int(input("Enter Test score: "))
+  if entry == 0:                                        # If user inputs zero break out of loop.    
+    break                                               # Break out of loop.
+  total += entry                                        # Adding the entries.
+  counter += 1                                          # Adding up the counter to divide the entries by.
+    
+#Calculates the average and outputs.
+total = total * 1.0
+if counter == 0: exit(1)
+avg = total / counter
+print("The average score is: {:.00f}".format(avg)) 
+print("")
+
+# Determines letter grade.
+if avg >= 90:
+  print("Your letter grade is an A.")
+elif 80 <= avg <= 89:
+  print("Your letter grade is a B.") 
+elif 70 <= avg <= 79:
+  print("Your letter grade is a C.") 
+elif 60 <= avg <= 69:
+  print("Your letter grade is a D.") 
+elif avg < 60:
+  print("Your letter grade is an F.")
+
+print("Thanks for using my program.")
